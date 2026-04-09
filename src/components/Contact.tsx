@@ -14,6 +14,7 @@ export default function Contact() {
   });
   const [showModal, setShowModal] = useState(false);
   const [formSubmitResponse, setFormSubmitResponse] = useState("");
+  const captaKey = config.CAPTA_SITE_KEY
   const formurl  = `${config.REACT_APP_API_URL}` + '/api/auth/sendFormEmail'
   const handleCaptcha = (value: any) => {
     if (value) {
@@ -96,6 +97,7 @@ export default function Contact() {
             name="name"
             className="w-full border p-3 rounded"
             placeholder="Name"
+            required
             value={formData.name}
             onChange={handleChange}
           />
@@ -104,6 +106,7 @@ export default function Contact() {
             name="email"
             className="w-full border p-3 rounded"
             placeholder="Email"
+            required
             value={formData.email}
             onChange={handleChange}
           />
@@ -113,11 +116,12 @@ export default function Contact() {
             className="w-full border p-3 rounded"
             placeholder="Tell us about your project"
             onChange={handleChange}
+            required
             value={formData.message}
           />
            {/* CAPTCHA */}
           <ReCAPTCHA
-            sitekey="6LeqnVgUAAAAABfkNuqFE9aWHVsmbw-ldeLhWgGf"
+            sitekey={captaKey}
             onChange={handleCaptcha}
           />
   

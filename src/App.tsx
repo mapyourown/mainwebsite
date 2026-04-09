@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
 
 
 
@@ -11,6 +13,9 @@ return (
 <Navbar />
 <Routes>
 <Route path="/" element={<Home />} />
+<Route path="/privacy" element={<PrivacyPolicy/>} />
+<Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
+
 
 </Routes>
 </BrowserRouter>

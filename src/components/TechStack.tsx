@@ -1,6 +1,6 @@
 import reactLogo from "../assets/tech/React.png"
 import nodeLogo from "../assets/tech/Nodejs.png"
-import awsLogo from "../assets/tech/aws.png"
+import awsLogo from "../assets/tech/AWS.png"
 import dockerLogo from "../assets/tech/Docker.png"
 import kubernetesLogo from "../assets/tech/Kubernetes.png"
 import postgresLogo from "../assets/tech//PostgresSQL.png"
